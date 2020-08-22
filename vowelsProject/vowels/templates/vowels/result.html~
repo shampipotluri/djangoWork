@@ -1,0 +1,11 @@
+<a href="{% url 'home' &}">Home Page</a>
+<h1>The result is</h1>
+{{resString}}
+<br/>
+vowels count
+a - {{vowelsCountA}}
+e - {{vowelsCountE}}
+i - {{vowelsCountI}}
+o - {{vowelsCountO}}
+u - {{vowelsCountU}}
+

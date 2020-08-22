@@ -1,0 +1,7 @@
+<h1> VOWEL REMOVERS AND COUNTERS </h1>
+<form action="result">
+	<textarea rows="4" cols="20" name="fulltext"></textarea>
+	<br/>
+	<input type="submit" value="proceed"/>
+</form>
+

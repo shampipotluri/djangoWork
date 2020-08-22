@@ -1,0 +1,26 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+import operator
+# Create your views here.
+
+def home(requests):
+    return render(requests,'vowels/home.html')
+
+def result(requests):
+    mytext=requests.GET['fulltext']
+    #now, count the vowels in mytext. also remove the vowels and find the string
+    resString=''
+    vowelsCount={'a':0,'e':0,'i':0,'o':0,'u':0}
+    for x in mytext:
+        if x=='a' or x=='A':
+            vowelsCount['a']=vowelsCount['a']+1
+        elif x=='e' or x=='E':
+            vowelsCount['e']=vowelsCount['e']+1
+        elif x=='i' or x=='I':
+            vowelsCount['i']=vowelsCount['i']+1
+        elif x=='o' or x=='O':
+            vowelsCount['o']=vowelsCount['o']+1
+        else:
+            resString=resString+x
+    return render(requests,'vowels/result.html',{'resString':resString,'vowelsCount':vowelsCount})
+
